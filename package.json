@@ -1,0 +1,8 @@
+{
+  "name": "yeonyui",
+  "version": "0.0.1",
+  "description": "vue ui components lib",
+  "repository": "https://github.com/ye0nyu/yeonyui.git",
+  "author": "yeonyu <hayan@yeonyu.dev>",
+  "license": "Apache-2.0"
+}

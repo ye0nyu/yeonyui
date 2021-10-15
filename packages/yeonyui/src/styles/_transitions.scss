@@ -1,0 +1,102 @@
+@mixin transition-default() {
+  &-enter-active,
+  &-leave-active {
+    transition: .3s cubic-bezier(0.25, 0.8, 0.5, 1) !important;
+  }
+}
+
+.expand-transition {
+  @include transition-default();
+  transition-duration: 400ms;
+
+  &-move {
+    transition: transform .6s;
+  }
+}
+
+.scale-transition {
+  @include transition-default();
+
+  &-move {
+    transition: transform .6s;
+  }
+
+  &-enter, &-leave, &-leave-to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.fade-transition {
+  &-enter-active {
+    transition: opacity 100ms ease-in;
+  }
+
+  &-leave-active {
+    transition: opacity 300ms ease;
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
+}
+
+.dialog-transition {
+  &-enter, &-leave-to {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  &-enter-to, &-leave {
+    opacity: 1;
+  }
+}
+
+.dialog-bottom-transition {
+  &-enter, &-leave-to {
+    transform: translateY(100%);
+  }
+}
+
+.dialog-top-transition {
+  &-enter, &-leave-to {
+    transform: translateY(-100%);
+  }
+}
+
+.slide-y-transition {
+  @include transition-default();
+
+  &-enter, &-leave-to {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
+
+.slide-y-reverse-transition {
+  @include transition-default();
+
+  &-enter, &-leave-to {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+
+.slide-x-transition {
+  @include transition-default();
+
+  &-enter, &-leave-to {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+}
+
+.slide-x-reverse-transition {
+  @include transition-default();
+
+  &-enter, &-leave-to {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+}

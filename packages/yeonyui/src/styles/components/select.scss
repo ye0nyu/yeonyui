@@ -1,0 +1,121 @@
+@use "../colors" as c;
+
+.y-select {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 1 auto;
+  font-size: 16px;
+  letter-spacing: normal;
+  max-width: 100%;
+  text-align: left;
+  position: relative;
+  padding-top: 12px;
+  margin-top: 4px;
+
+  &--no-label {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  &__stack {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    min-width: 0;
+    width: 100%;
+  }
+
+  &__display {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 8px;
+    background-color: #ffffff;
+    transition: all 200ms ease;
+    border: 1px solid #e4e4e4;
+    border-radius: 2px;
+    //box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.03);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: inherit;
+    color: inherit;
+
+    &:hover {
+      border-color: c.$primary;
+    }
+
+    .y-select__caret path {
+      transition: d 100ms ease;
+      transition-delay: 200ms;
+    }
+  }
+
+  &--active {
+    .y-select__display {
+      border-color: c.$primary;
+    }
+    .y-select__caret path {
+      transition-delay: 0ms;
+      fill: c.$primary;
+    }
+  }
+
+  &--focused {
+    .y-select__display {
+      outline: rgba(c.$primary, 0.5) auto 1px;
+      outline-offset: 2px;
+      border-color: c.$primary;
+    }
+    .y-select__caret path {
+      fill: c.$primary;
+    }
+  }
+
+  &__selection {
+    align-items: center;
+    display: flex;
+    flex: 1 1;
+    flex-wrap: wrap;
+    line-height: 18px;
+    max-width: 100%;
+    min-width: 0;
+    padding: 8px 0;
+  }
+
+  .y-select__selection > input {
+    outline: none;
+    pointer-events: none;
+    flex: 1 1;
+    position: relative;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+.y-select__menu {
+  background: #ffffff;
+  width: 100%;
+  display: block;
+  padding: 8px 0;
+  box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.2);
+
+  .y-select__menu-list {
+    &__item {
+      padding: 8px 8px;
+      &:hover {
+        cursor: pointer;
+        background: rgba(c.$primary, 0.2);
+        transition: background-color 300ms cubic-bezier(.25,.46,.33,.97);
+      }
+    }
+  }
+  .y-select__menu-list__item--active {
+    color: c.$primary;
+    background: rgba(c.$primary, 0.3);
+  }
+}
+

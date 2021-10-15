@@ -1,0 +1,33 @@
+$dimm-grey: #9b9b9b;
+$light-grey: #979797;
+$label-grey: #B9B9B9;
+$mirage-grey: #373D42;
+$black-41: #414141;
+//$primary: #399bc7;
+$primary: #5c7ecc;
+//$accent-color: #6fb4d9;
+$accent-color: #4a72e2;
+$silver: #bec8d0;
+$shark-skin: #373d42;
+$alizarin-crimson: #e32636;
+$clean-part-color: #c15555;
+$os-color: #46aad9;
+$os-grey: #265e79;
+$data-color: #e0a071;
+$restore-color: #eed37b;
+$alice-grey: #f2f3f4;
+$mystic: #DCE5E9;
+/*
+  Theme Light
+*/
+$light-theme: (
+  "hover-bg": #F5F5F5,
+  "bg": linear-gradient(126deg, rgba(#dbe7f6, 0.35), rgba(#d6def6, 0.35)),
+  "header-color": #455167,
+  "tile-border": #E1E6F6,
+  "border-color": #E0EBFD,
+  "border-grey": #DBDBDB,
+)
+/*
+  Theme Dark
+*/

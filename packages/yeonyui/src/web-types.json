@@ -1,0 +1,84 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
+  "framework": "vue",
+  "name": "yeonyui",
+  "version": "0.0.1",
+  "contributions": {
+    "html": {
+      "types-syntax": "typescript",
+      "tags": [
+        {
+          "name": "YAlert",
+          "source": {
+            "module": "./components",
+            "symbol": "YAlert"
+          }
+        },
+        {
+          "name": "YBtn",
+          "source": {
+            "module": "./components",
+            "symbol": "YBtn"
+          }
+        },
+        {
+          "name": "YRadio",
+          "source": {
+            "module": "./components",
+            "symbol": "YRadio"
+          }
+        },
+        {
+          "name": "YRadioSet",
+          "source": {
+            "module": "./components",
+            "symbol": "YRadioSet"
+          }
+        },
+        {
+          "name": "YCheckbox",
+          "source": {
+            "module": "./components",
+            "symbol": "YCheckbox"
+          }
+        },
+        {
+          "name": "YInputCheckbox",
+          "source": {
+            "module": "./components",
+            "symbol": "YInputCheckbox"
+          }
+        },
+        {
+          "name": "YInputCheckbox",
+          "source": {
+            "module": "./components",
+            "symbol": "YInputCheckbox"
+          }
+        },
+        {
+          "name": "YSelect",
+          "source": {
+            "module": "./components",
+            "symbol": "YSelect"
+          }
+        },
+        {
+          "name": "YTextInput",
+          "source": {
+            "module": "./components",
+            "symbol": "YTextInput"
+          }
+        },
+        {
+          "name": "YProgressBar",
+          "source": {
+            "module": "./components",
+            "symbol": "YProgressBar"
+          }
+        }
+      ],
+      "attributes": []
+    }
+  }
+}

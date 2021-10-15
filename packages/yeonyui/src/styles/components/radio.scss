@@ -1,0 +1,89 @@
+/*!
+ * Created by yeonyu at 2021-09-28
+ */
+
+@use "../colors" as c;
+
+.y-input--radio {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  margin-right: 8px;
+
+  input[role=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .icon-radio__outline {
+    fill: none;
+    stroke: rgba(c.$silver, 0.8);
+    stroke-width: 2;
+  }
+
+  .icon-radio__bead {
+    fill: none;
+    transform: scale(1.2);
+    transform-origin: center;
+  }
+
+  input:checked ~ .icon-radio,
+  &.y-input--active .icon-radio {
+    .icon-radio__bead {
+      fill: c.$primary;
+      stroke: rgba(c.$primary, 0.8);
+      transform: scale(1);
+      transition: fill 200ms ease-in, transform 120ms ease;
+    }
+
+    .icon-radio__outline {
+      stroke: rgba(c.$primary, 0.8);
+    }
+  }
+
+  &.y-input {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      left: -2px;
+      border-radius: 50%;
+      pointer-events: none;
+      border: 6px solid currentColor;
+      opacity: 0;
+    }
+
+    &--focused:before {
+      opacity: 0.2;
+    }
+  }
+}
+
+.y-radio {
+  &__slot {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    cursor: pointer;
+    font-weight: 400;
+    color: #585858;
+    font-size: 14px;
+  }
+}
+
+.y-radio-set > .y-radio {
+  margin-bottom: 8px;
+}

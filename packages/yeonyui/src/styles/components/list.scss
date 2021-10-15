@@ -1,0 +1,36 @@
+/*!
+ * Created by yeonyu at 2021-10-06
+ */
+@use "../colors" as c;
+@use "../mixins/position" as pos;
+
+.y-list-item {
+  min-width: 120px;
+  display: flex;
+  position: relative;
+
+  &__icon {
+    padding-top: 3px;
+    padding-left: 8px;
+  }
+
+  &__content {
+    padding: 8px;
+  }
+
+  &__icon ~ .y-list-item__content {
+    padding-left: 8px;
+  }
+
+  &:before {
+    content: "";
+    @include pos.absolute-expand;
+    pointer-events: none;
+    background: c.$primary;
+    opacity: 0;
+  }
+
+  &:hover:before {
+    opacity: 0.08;
+  }
+}
